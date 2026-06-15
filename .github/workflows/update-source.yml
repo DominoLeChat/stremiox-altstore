@@ -1,0 +1,39 @@
+name: Update AltStore Source
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Tous les jours à 00:00 UTC
+  workflow_dispatch:     # Permet le trigger manuel
+  release:
+    types: [published]   # Trigger à chaque release de StremioX
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install requests
+      
+      - name: Update apps.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python update_json.py
+      
+      - name: Commit and push
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add apps.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Updated source with latest StremioX release"
+            git push
+          fi
