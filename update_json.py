@@ -34,7 +34,7 @@ def generate_apps_json(download_url, release):
         "subtitle": "Stremio on iOS",
         "description": "Altstore source for StremioX on iOS",
         "iconURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
-        "headerURL": https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/ResourcesTV/Assets.xcassets/App%20Icon%20%26%20Top%20Shelf%20Image.brandassets/Top%20Shelf%20Image%20Wide.imageset/tv_topshelf_wide.png,
+        "headerURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/ResourcesTV/Assets.xcassets/App%20Icon%20%26%20Top%20Shelf%20Image.brandassets/Top%20Shelf%20Image%20Wide.imageset/tv_topshelf_wide.png",
         "website": "https://github.com/mamaclapper/StremioX",
         "apps": [{
             "name": "StremioX",
