@@ -4,7 +4,7 @@ on:
     - cron: '0 0 * * *'  # Tous les jours à 00:00 UTC
   workflow_dispatch:     # Permet le trigger manuel
   release:
-    types: [published]   # Trigger à chaque release (optionnel)
+    types: [published]   # Trigger à chaque release (né©©essite PAT)
 
 jobs:
   update:
@@ -13,22 +13,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
+          # Utilise le PAT pour que le release event re-trigger le workflow
+          token: ${{ secrets.GH_PAT }}
+      
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-
+      
       - name: Install dependencies
         run: pip install requests
-
+      
       - name: Update apps.json
         id: update
         run: |
           python update_json.py
           echo "updated=$(test -f apps.json && echo true || echo false)" >> $GITHUB_OUTPUT
-
+      
       - name: Commit and push if changed
         run: |
           git config --global user.name 'GitHub Action'
