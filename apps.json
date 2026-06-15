@@ -11,9 +11,9 @@
       "bundleIdentifier": "com.stremiox.app.native",
       "developerName": "mamaclapper",
       "iconURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
-      "version": "0.3.3",
+      "version": "0.3.4",
       "versionDate": "2026-06-15",
-      "downloadURL": "https://github.com/mamaclapper/StremioX/releases/download/v0.3.3/StremioX-iOS-v0.3.3-ci.ipa",
+      "downloadURL": "https://github.com/mamaclapper/StremioX/releases/download/v0.3.4/StremioX-iOS-v0.3.4-ci.ipa",
       "localizedDescription": "Stremio on iOS"
     }
   ],
