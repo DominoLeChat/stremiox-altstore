@@ -1,16 +1,16 @@
 {
   "name": "StremioX",
   "identifier": "com.stremio.x",
-  "sourceURL": "https://raw.githubusercontent.com/DominoLeChat/stremiox-altstore/apps.json",
+  "sourceURL": "https://raw.githubusercontent.com/DominoLeChat/stremiox-altstore/refs/heads/main/apps.json",
   "apps": [
     {
       "name": "StremioX",
-      "bundleIdentifier": "com.stremio.x",
+      "bundleIdentifier": "com.stremiox.app.native",
       "developerName": "mamaclapper",
       "version": "0.3.3",
       "versionDate": "2026-06-15",
       "downloadURL": "https://github.com/mamaclapper/StremioX/releases/download/v0.3.3/StremioX-iOS-v0.3.3-ci.ipa",
-      "localizedDescription": "Stremio sur iOS"
+      "localizedDescription": "StremioX on iOS"
     }
   ]
 }
