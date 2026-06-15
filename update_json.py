@@ -12,6 +12,10 @@ IPA_PATTERNS = [
 def get_latest_release():
     url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases/latest"
     response = requests.get(url)
+    if response.status_code != 200:
+        print(f"Error fetching release: {response.status_code}")
+        print(response.text)
+        exit(1)
     return response.json()
 
 def find_ios_ipa(release):
@@ -24,10 +28,11 @@ def find_ios_ipa(release):
 def generate_apps_json(download_url, release):
     version = release["tag_name"].replace("v", "")
     date = release["published_at"]
-    
+
     return {
         "name": "StremioX",
-        "sourceURL": "https://raw.githubusercontent.com//DominoLeChat/stremiox-altstore/apps.json",
+        "identifier": "com.stremio.x",
+        "sourceURL": "https://raw.githubusercontent.com/dominolechat/stremiox-altstore/apps.json",
         "apps": [{
             "name": "StremioX",
             "bundleIdentifier": "com.stremio.x",
@@ -40,16 +45,22 @@ def generate_apps_json(download_url, release):
     }
 
 if __name__ == "__main__":
+    print("Fetching latest StremioX release...")
     release = get_latest_release()
+    print(f"Found release: {release['tag_name']}")
+
     download_url = find_ios_ipa(release)
-    
+
     if not download_url:
-        print("No iOS IPA found")
+        print("No iOS IPA found in assets!")
+        print("Assets:", [a["name"] for a in release.get("assets", [])])
         exit(1)
-    
+
+    print(f"Found iOS IPA: {download_url}")
     apps_json = generate_apps_json(download_url, release)
-    
+
     with open("apps.json", "w") as f:
         json.dump(apps_json, f, indent=2)
-    
-    print(f"Updated to {release['tag_name']}")
+
+    print(f"Written apps.json with version {release['tag_name']}")
+    print(f"Download URL: {download_url}")
