@@ -32,15 +32,15 @@ def generate_apps_json(download_url, release):
     return {
         "name": "StremioX",
         "identifier": "com.stremio.x",
-        "sourceURL": "https://raw.githubusercontent.com/DominoLeChat/stremiox-altstore/apps.json",
+        "sourceURL": "https://raw.githubusercontent.com/DominoLeChat/stremiox-altstore/refs/heads/main/apps.json",
         "apps": [{
             "name": "StremioX",
-            "bundleIdentifier": "com.stremio.x",
+            "bundleIdentifier": "com.stremiox.app.native",
             "developerName": "mamaclapper",
             "version": version,
             "versionDate": date[:10],
             "downloadURL": download_url,
-            "localizedDescription": "Stremio sur iOS"
+            "localizedDescription": "StremioX on iOS"
         }]
     }
 
