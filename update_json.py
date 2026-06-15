@@ -32,7 +32,7 @@ def generate_apps_json(download_url, release):
     return {
         "name": "StremioX",
         "identifier": "com.stremio.x",
-        "sourceURL": "https://raw.githubusercontent.com/dominolechat/stremiox-altstore/apps.json",
+        "sourceURL": "https://raw.githubusercontent.com/DominoLeChat/stremiox-altstore/apps.json",
         "apps": [{
             "name": "StremioX",
             "bundleIdentifier": "com.stremio.x",
