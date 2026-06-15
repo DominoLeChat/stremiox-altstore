@@ -1,20 +1,18 @@
 name: Update AltStore Source
 on:
   schedule:
-    - cron: '0 0 * * *'  # Tous les jours à 00:00 UTC
-  workflow_dispatch:     # Permet le trigger manuel
-  release:
-    types: [published]   # Trigger à chaque release (né©©essite PAT)
+    - cron: '*/10 * * * *'  # Toutes les 10 minutes
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          # Utilise le PAT pour que le release event re-trigger le workflow
-          token: ${{ secrets.GH_PAT }}
       
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -25,10 +23,8 @@ jobs:
         run: pip install requests
       
       - name: Update apps.json
-        id: update
         run: |
           python update_json.py
-          echo "updated=$(test -f apps.json && echo true || echo false)" >> $GITHUB_OUTPUT
       
       - name: Commit and push if changed
         run: |
@@ -36,9 +32,8 @@ jobs:
           git config --global user.email 'action@github.com'
           git add apps.json
           if git diff --staged --quiet; then
-            echo "No changes in apps.json"
+            echo "No changes"
           else
             git commit -m "Updated source with latest StremioX release"
             git push
-            echo "Pushed new apps.json"
           fi
