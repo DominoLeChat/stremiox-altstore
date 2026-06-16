@@ -1,20 +1,20 @@
 {
-  "name": "StremioX",
-  "subtitle": "Stremio on iOS",
-  "description": "Altstore source for StremioX on iOS",
-  "iconURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
-  "headerURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/ResourcesTV/Assets.xcassets/App%20Icon%20%26%20Top%20Shelf%20Image.brandassets/Top%20Shelf%20Image%20Wide.imageset/tv_topshelf_wide.png",
-  "website": "https://github.com/mamaclapper/StremioX",
+  "name": "VortX",
+  "subtitle": "VortX on iOS",
+  "description": "Altstore source for VortX (Stremio client) on iOS",
+  "iconURL": "https://raw.githubusercontent.com/mamaclapper/VortX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
+  "headerURL": "https://raw.githubusercontent.com/mamaclapper/VortX/refs/heads/main/app/ResourcesTV/Assets.xcassets/App%20Icon%20%26%20Top%20Shelf%20Image.brandassets/Top%20Shelf%20Image%20Wide.imageset/tv_topshelf_wide.png",
+  "website": "https://github.com/mamaclapper/VortX",
   "apps": [
     {
-      "name": "StremioX",
-      "bundleIdentifier": "com.stremiox.app.native",
+      "name": "VortX",
+      "bundleIdentifier": "com.vortx.app.native",
       "developerName": "mamaclapper",
-      "iconURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
-      "version": "0.3.4",
+      "iconURL": "https://raw.githubusercontent.com/mamaclapper/VortX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
+      "version": "0.3.6",
       "versionDate": "2026-06-15",
-      "downloadURL": "https://github.com/mamaclapper/StremioX/releases/download/v0.3.4/StremioX-iOS-v0.3.4-ci.ipa",
-      "localizedDescription": "Stremio on iOS"
+      "downloadURL": "https://github.com/mamaclapper/VortX/releases/download/v0.3.6/VortX-iOS-v0.3.6-ci.ipa",
+      "localizedDescription": "VortX on iOS"
     }
   ],
   "news": []
