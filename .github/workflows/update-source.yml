@@ -1,7 +1,7 @@
 name: Update AltStore Source
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Toutes les 10 minutes
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -34,6 +34,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "Updated source with latest StremioX release"
+            git commit -m "Updated source with latest VortX release"
             git push
           fi
