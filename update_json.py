@@ -3,10 +3,10 @@ import json
 from datetime import datetime
 
 REPO_OWNER = "mamaclapper"
-REPO_NAME = "StremioX"
+REPO_NAME = "VortX"
 IPA_PATTERNS = [
-    "StremioX-iOS-",
-    "StremioX-iOS"
+    "VortX-iOS-",
+    "VortX-iOS"
 ]
 
 def get_latest_release():
@@ -30,27 +30,27 @@ def generate_apps_json(download_url, release):
     date = release["published_at"]
 
     return {
-        "name": "StremioX",
-        "subtitle": "Stremio on iOS",
-        "description": "Altstore source for StremioX on iOS",
-        "iconURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
-        "headerURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/ResourcesTV/Assets.xcassets/App%20Icon%20%26%20Top%20Shelf%20Image.brandassets/Top%20Shelf%20Image%20Wide.imageset/tv_topshelf_wide.png",
-        "website": "https://github.com/mamaclapper/StremioX",
+        "name": "VortX",
+        "subtitle": "VortX on iOS",
+        "description": "Altstore source for VortX (Stremio client) on iOS",
+        "iconURL": "https://raw.githubusercontent.com/mamaclapper/VortX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
+        "headerURL": "https://raw.githubusercontent.com/mamaclapper/VortX/refs/heads/main/app/ResourcesTV/Assets.xcassets/App%20Icon%20%26%20Top%20Shelf%20Image.brandassets/Top%20Shelf%20Image%20Wide.imageset/tv_topshelf_wide.png",
+        "website": "https://github.com/mamaclapper/VortX",
         "apps": [{
-            "name": "StremioX",
-            "bundleIdentifier": "com.stremiox.app.native",
+            "name": "VortX",
+            "bundleIdentifier": "com.vortx.app.native",
             "developerName": "mamaclapper",
-            "iconURL": "https://raw.githubusercontent.com/mamaclapper/StremioX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
+            "iconURL": "https://raw.githubusercontent.com/mamaclapper/VortX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
             "version": version,
             "versionDate": date[:10],
             "downloadURL": download_url,
-            "localizedDescription": "Stremio on iOS"
+            "localizedDescription": "VortX on iOS"
         }],
         "news": []
     }
 
 if __name__ == "__main__":
-    print("Fetching latest StremioX release...")
+    print("Fetching latest VortX release...")
     release = get_latest_release()
     print(f"Found release: {release['tag_name']}")
 
