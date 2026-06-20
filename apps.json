@@ -11,9 +11,9 @@
       "bundleIdentifier": "com.vortx.app.native",
       "developerName": "mamaclapper",
       "iconURL": "https://raw.githubusercontent.com/mamaclapper/VortX/refs/heads/main/app/Resources/Assets.xcassets/AppIcon.appiconset/ios_1024.png",
-      "version": "0.3.8",
-      "versionDate": "2026-06-18",
-      "downloadURL": "https://github.com/VortXTV/VortX/releases/download/v0.3.8/VortX-iOS-v0.3.8-ci.ipa",
+      "version": "0.3.8-beta5",
+      "versionDate": "2026-06-20",
+      "downloadURL": "https://github.com/VortXTV/VortX/releases/download/v0.3.8-beta5/VortX-iOS-v0.3.8-beta5-ci.ipa",
       "localizedDescription": "VortX on iOS"
     }
   ],
